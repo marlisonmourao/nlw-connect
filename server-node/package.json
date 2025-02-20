@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "dev": "tsx watch --env-file=.env src/server.ts"
+    "dev": "tsx watch --env-file=.env src/server.ts",
+    "build": "tsup-node",
+    "build:run": "node --env-file .env dist/server.mjs"
   },
   "keywords": [],
   "author": "",
