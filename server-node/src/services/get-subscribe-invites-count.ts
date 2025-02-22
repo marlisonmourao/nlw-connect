@@ -1,13 +1,13 @@
 import { redis } from '@/redis/client'
 
 interface GetSubscribeInvitesCountParams {
-  subscribedId: string
+  subscriberId: string
 }
 
 export async function getSubscribeInvitesCount({
-  subscribedId,
+  subscriberId,
 }: GetSubscribeInvitesCountParams) {
-  const count = await redis.zscore('referral:ranking', subscribedId)
+  const count = await redis.zscore('referral:ranking', subscriberId)
 
   return {
     count: count ? Number.parseInt(count) : 0,

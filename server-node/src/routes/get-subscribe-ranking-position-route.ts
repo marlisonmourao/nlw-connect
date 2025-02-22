@@ -5,13 +5,13 @@ import z from 'zod'
 export const getSubscribePositionRouteRoute: FastifyPluginAsyncZod =
   async app => {
     app.get(
-      '/subscribes/:subscribedId/ranking/position',
+      '/subscribers/:subscriberId/ranking/position',
       {
         schema: {
           summary: 'Get subscribed rank position',
           tags: ['referral'],
           params: z.object({
-            subscribedId: z.string(),
+            subscriberId: z.string(),
           }),
           response: {
             200: z.object({
@@ -21,10 +21,10 @@ export const getSubscribePositionRouteRoute: FastifyPluginAsyncZod =
         },
       },
       async request => {
-        const { subscribedId } = request.params
+        const { subscriberId } = request.params
 
         const { position } = await getSubscribeRankingPosition({
-          subscribedId,
+          subscriberId,
         })
 
         return { position }

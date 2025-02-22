@@ -1,13 +1,13 @@
 import { redis } from '@/redis/client'
 
 interface GetSubscribeRankingPositionParams {
-  subscribedId: string
+  subscriberId: string
 }
 
 export async function getSubscribeRankingPosition({
-  subscribedId,
+  subscriberId,
 }: GetSubscribeRankingPositionParams) {
-  const rank = await redis.zrevrank('referral:ranking', subscribedId)
+  const rank = await redis.zrevrank('referral:ranking', subscriberId)
 
   if (rank === null) {
     return { position: null }

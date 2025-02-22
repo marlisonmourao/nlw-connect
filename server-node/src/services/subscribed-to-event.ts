@@ -37,9 +37,9 @@ export async function subscribeToEvent({
     await redis.zincrby('referral:ranking', 1, referrerId)
   }
 
-  const subscribed = result[0]
+  const subscriber = result[0]
 
   return {
-    subscribedId: subscribed.id,
+    subscriberId: subscriber.id,
   }
 }

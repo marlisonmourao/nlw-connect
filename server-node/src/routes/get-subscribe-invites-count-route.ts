@@ -5,13 +5,13 @@ import z from 'zod'
 export const getSubscribeInvitesCountRoute: FastifyPluginAsyncZod =
   async app => {
     app.get(
-      '/subscribes/:subscribedId/ranking/count',
+      '/subscribers/:subscriberId/ranking/count',
       {
         schema: {
           summary: 'Get subscribed invite count',
           tags: ['referral'],
           params: z.object({
-            subscribedId: z.string(),
+            subscriberId: z.string(),
           }),
           response: {
             200: z.object({
@@ -21,10 +21,10 @@ export const getSubscribeInvitesCountRoute: FastifyPluginAsyncZod =
         },
       },
       async (request, reply) => {
-        const { subscribedId } = request.params
+        const { subscriberId } = request.params
 
         const { count } = await getSubscribeInvitesCount({
-          subscribedId,
+          subscriberId,
         })
 
         return { count }
