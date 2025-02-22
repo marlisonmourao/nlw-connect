@@ -1,34 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dev Stage Web
 
-## Getting Started
+<p align="center">
+  <a href="#-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-clonando-o-projeto-para-sua-máquina">Clonar</a>
+</p>
 
-First, run the development server:
+<p align="center">
+  <img alt="Capa do Projeto" src="../.github/hero.png" width="100%">
+  <img alt="Visualização no Desktop" src="../.github/desktop.png" width="100%">
+</p>
+
+---
+
+## 🚀 Objetivo do Projeto
+
+O **Dev Stage Web** é um site responsivo para criação e indicação de eventos. O objetivo principal é fornecer uma interface intuitiva e dinâmica para que os usuários possam gerenciar eventos de forma eficiente.
+
+### ✨ Funcionalidades Principais
+
+- **Criação de Eventos**: Permite aos usuários criar eventos personalizados.
+- **Indicação de Eventos**: Compartilhamento e recomendação de eventos.
+- **Design Responsivo**: Totalmente adaptado para dispositivos móveis e desktops.
+- **Integração com API**: Uso de **Orval** para geração de clientes de API a partir do OpenAPI.
+
+---
+
+## 🛠 Tecnologias Utilizadas
+
+Este projeto foi desenvolvido utilizando as seguintes tecnologias:
+
+- [Next.js](https://nextjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [TailwindCSS v4](https://tailwindcss.com/)
+- [React Hook Form](https://react-hook-form.com/)
+- [Zod](https://zod.dev/)
+- [Orval](https://orval.dev/)
+
+---
+
+## 🔗 API
+
+A API utilizada no projeto pode ser acessada aqui: [**devStage**](https://github.com/marlisonmourao/nlw-connect.git).
+
+---
+
+## 💻 Clonando o Projeto
+
+Para clonar e rodar o projeto localmente, siga os passos abaixo:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Clone o repositório
+$ git clone https://github.com/marlisonmourao/nlw-connect.git
+
+# Acesse a pasta do projeto
+$ cd nlw-connect
+
+# Instale as dependências
+$ npm install # ou npm i
+# Ou, se estiver utilizando pnpm:
+$ pnpm install # ou pnpm i
+
+# Abra o projeto no VS Code
+$ code .
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Agora, o projeto está pronto para ser testado e modificado conforme sua necessidade.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-## Learn More
+<p align="center">
+  <img height="300px" alt="Exemplo do Projeto" src="../.github/computer.png" />
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<p align="center">Made with 💜 by <a href="https://github.com/marlisonmourao">Marlison Mourão</a></p>
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
